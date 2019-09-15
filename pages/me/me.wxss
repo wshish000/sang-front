@@ -1,0 +1,19 @@
+/* pages/me/me.wxss */
+page{
+  height: 100%;
+}
+.container {
+  background: #888888;
+  height: 100%;
+  display:flex; /*flex布局*/
+  justify-content: center;/*水平轴线居中 */
+  align-items: center;
+}
+.qrcode{
+  width: 400rpx;
+  height: 400rpx;
+}
+.text{
+  font-size: 50rpx;
+  color: #ffffff;
+}

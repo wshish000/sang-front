@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/past/past",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#888888",
+    "navigationBarTitleText": "每日一丧",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#888888",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "今日丧",
+      "iconPath": "images/bar/today-0.jpg",
+      "selectedIconPath": "images/bar/today-1.jpg"
+    },{
+      "pagePath": "pages/past/past",
+      "text": "往日丧",
+      "iconPath": "images/bar/past-0.jpg",
+      "selectedIconPath": "images/bar/past-1.jpg"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "关于",
+      "iconPath": "images/bar/me-0.jpg",
+      "selectedIconPath": "images/bar/me-1.jpg"
+    }]
+  },
+  "networkTimeout":{
+    "request": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="frame">
+    <button bindtap="open" size="mini" plain="True" class="click">开</button>
+    <view class="message" style="animation-name:{{name}};-webkit-animation-name:{{name}}">
+      <view class='card-title'>
+          <text>每日一丧</text>
+          <view class="card-date">
+            <time>{{date}}</time>
+          </view>
+        </view>
+        <view class="card_info">
+          <text class='text'>{{sangList[0].text}}</text>
+        </view>
+    </view>
+    <view class="bottom"></view>
+    <view class="left"></view>
+    <view class="right"></view>
+    <view class="top" style="animation-play-state:{{status}};-webkit-animation-play-state:{{status}}"></view>
+  </view>
+</view>

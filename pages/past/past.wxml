@@ -1,0 +1,125 @@
+<!--pages/past/past.wxml-->
+<view class='body-box' style='background-color:#888888;'>
+  <!-- 第一张 -->
+  <view class='body-swiper1' bindtouchstart='touchstart1' bindtouchend='touchend1' style='z-index:{{index1}}; top:{{top1}}rpx; margin-left:{{left1}}rpx; width:{{width1}}rpx;' animation='{{animationData1}}'>
+    <!-- 正面 -->
+    <block wx:if="{{isFront1}}">
+      <view class="body-container" style="background-color:#6e727c">
+          <image src="../../images/sang/1.jpg" mode="aspectFill"></image>
+        <!-- <view class='card-title'>
+          <text>每日一丧</text>
+          <view class="card-date">
+            <time>{{date}}</time>
+          </view>
+        </view> -->
+        <view class="card_info">
+          <text class='text'>{{sangList[0].text}}</text>
+        </view>
+        
+        <!-- <image class="avatar" src="/images/avatar.png"></image> -->
+      </view>
+    </block>
+    <!-- 反面 -->
+    <block wx:else>
+      <view class="body-container" style="background-color:#93d7e4">
+          <image src="../../images/ran/01.jpg" mode="aspectFill"></image>
+        <!-- <view class='card-title'>
+          <text>每日一丧</text>
+          <view class="card-date">
+            <time>{{date}}</time>
+          </view>
+        </view> -->
+        <view class="card_info">
+          <text class='text'>{{ranList[0].text}}</text>
+        </view>
+        
+        <!-- <image class="avatar" src="/images/avatar.png"></image> -->
+      </view>
+    </block>
+  </view>
+  <!-- 第二张 -->
+  <view class='body-swiper2' bindtouchstart='touchstart2' bindtouchend='touchend2' style='z-index:{{index2}}; top:{{top2}}rpx; margin-left:{{left2}}rpx; width:{{width2}}rpx;' animation='{{animationData2}}'>
+    <!-- 正面 -->
+    <block wx:if="{{isFront2}}">
+      <view class="body-container" style="background-color:#ba9705">
+          <image src="../../images/sang/2.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{sangList[1].text}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 反面 -->
+    <block wx:else>
+      <view class="body-container" style="background-color:#e170a3">
+          <image src="../../images/ran/02.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{ranList[1].text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 第三张 -->
+  <view class='body-swiper3' bindtouchstart='touchstart3' bindtouchend='touchend3' style='z-index:{{index3}}; top:{{top3}}rpx; margin-left:{{left3}}rpx; width:{{width3}}rpx;' animation='{{animationData3}}'>
+    <!-- 正面 -->
+    <!-- 正面 -->
+    <block wx:if="{{isFront3}}">
+      <view class="body-container" style="background-color:#c8a87f">
+          <image src="../../images/sang/3.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{sangList[2].text}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 反面 -->
+    <block wx:else>
+      <view class="body-container" style="background-color:#c81200">
+          <image src="../../images/ran/03.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{ranList[2].text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 第4张 -->
+  <view class='body-swiper4' bindtouchstart='touchstart4' bindtouchend='touchend4' style='z-index:{{index4}}; top:{{top4}}rpx; margin-left:{{left4}}rpx; width:{{width4}}rpx;' animation='{{animationData4}}'>
+    <!-- 正面 -->
+    <block wx:if="{{isFront4}}">
+      <view class="body-container" style="background-color:#535050">
+          <image src="../../images/sang/4.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{sangList[3].text}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 反面 -->
+    <block wx:else>
+      <view class="body-container" style="background-color:#0098bc">
+          <image src="../../images/ran/04.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{ranList[3].text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 第5张 -->
+  <view class='body-swiper5' bindtouchstart='touchstart5' bindtouchend='touchend5' style='z-index:{{index5}}; top:{{top5}}rpx; margin-left:{{left5}}rpx; width:{{width5}}rpx;' animation='{{animationData5}}'>
+    <!-- 正面 -->
+    <block wx:if="{{isFront5}}">
+      <view class="body-container" style="background-color:#948975">
+          <image src="../../images/sang/5.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{sangList[4].text}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 反面 -->
+    <block wx:else>
+      <view class="body-container" style="background-color:#53b542">
+          <image src="../../images/ran/05.jpg" mode="aspectFill"></image>
+        <view class="card_info">
+          <text class='text'>{{ranList[4].text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

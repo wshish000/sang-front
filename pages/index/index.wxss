@@ -1,0 +1,241 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+.container {
+	margin: 0;
+	height: 100%;
+	background:#888888;
+	text-align: center;
+	font-family: 'Ubuntu';
+}
+.frame{
+	width: 280px;
+	height: 170px;
+	margin: 10px auto 0;
+	position: relative;
+	background: #435d77;
+	border-radius:0 0 10px 10px; 
+}
+.click{
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	z-index: 311;
+	top: 120px;
+	left: 110px;
+}
+.left,.right,.top{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
+.left{	
+	border-left: 140px solid #d5a42e;
+	border-top: 80px solid transparent;
+	border-bottom: 80px solid transparent;
+}
+.right{	
+	border-right: 140px solid #d5a42e;
+	border-top: 80px solid transparent;
+	border-bottom: 80px solid transparent;
+	left:140px;
+}
+.top{	
+	border-right: 140px solid transparent;
+	border-top: 100px solid #fbcf5b;
+	border-left: 140px solid transparent;
+	transition:transform 1s,border 1s, ease-in-out;
+	transform-origin:top;
+	transform:rotateX(0deg);
+	z-index: 500;
+  animation-name: open; /*动画的名称 */
+  animation-duration: 2000ms; /*动画从开始到结束的时间*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: 1; /*动画执行多少次的参数*//*以下是兼容ios所需，参数意义与上相同*/
+  animation-fill-mode: forwards; /*定格在结束位置*/
+  -webkit-animation-name: open;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; /*定格在结束位置*/
+}
+.bottom{
+	width: 280px;
+	height: 90px;
+	position: absolute;
+	background: #e8a800;
+	top: 80px;
+	border-radius:0 0 10px 10px;
+  box-shadow: 0 2px 2px #333;
+	z-index: 310; 
+}
+
+.message{
+	position: absolute;
+	width: 260px;
+	height:150px;
+  /* top: 20px; */
+  bottom: 0px;
+	background: rgba(188, 188, 188);
+	margin: 0 10px;
+	/* box-shadow: 0 0 5px 2px #333; */
+	z-index: 300;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+  /* animation-name: stretch;  */
+  animation-duration: 3000ms;
+  animation-delay: 2s;
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: 1; /*动画执行多少次的参数*//*以下是兼容ios所需，参数意义与上相同*/
+  animation-fill-mode: forwards; /*定格在结束位置*/
+  /* -webkit-animation-name: pull; */
+  /* -webkit-animation-duration: 3000ms; */
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; /*定格在结束位置*/
+}
+#form_wrap:hover form {
+	height:530px;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 200rpx; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+@keyframes open {
+  /*开始的形状*/
+  from {
+	  transform-origin:top;
+	  transform:rotateX(0deg);
+	  z-index: 500;
+	  border-top: 100px solid #fbcf5b;
+  }/*结束的形状*/
+  to {
+    transform-origin:top;
+	  transform:rotateX(180deg);
+	  border-top: 100px solid #2c3e50;
+	  z-index: 200;
+  }
+}
+/*兼容ios*/
+@-webkit-keyframes open {
+  /*开始的形状*/
+  from {
+	  transform-origin:top;
+	  transform:rotateX(0deg);
+	  z-index: 500;
+	  border-top: 100px solid #03A9F4;
+  }/*结束的形状*/
+  to {
+    transform-origin:top;
+	  transform:rotateX(180deg);
+	  border-top: 100px solid #2c3e50;
+	  z-index: 200;
+  }
+}
+@-webkit-keyframes pull {
+	0%{
+		transform:translatey(0px);
+    height: 150px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+	}
+  33%{
+    transform:translatey(0px);
+    height: 350px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+  }
+	66%{
+		transform:translatey(-150px);
+    height: 350px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+	}
+	67%{
+		transform:translatey(-150px);
+    height: 350px;
+		z-index: 350;
+		transition: 10s ease-in-out;
+	}
+	100%{
+		transform:translatey(0px);
+    height: 350px;
+		z-index: 350;
+		transition: 10s ease-in-out;
+	}
+}
+@keyframes pull {
+	0%{
+		transform:translatey(0px);
+    height: 150px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+	}
+  33%{
+    transform:translatey(0px);
+    height: 350px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+  }
+	66%{
+		transform:translatey(-150px);
+    height: 350px;
+		z-index: 300;
+		transition: 10s ease-in-out;
+	}
+	67%{
+		transform:translatey(-150px);
+    height: 350px;
+		z-index: 350;
+		transition: 10s ease-in-out;
+	}
+	100%{
+		transform:translatey(0px);
+    height: 350px;
+		z-index: 350;
+		transition: 10s ease-in-out;
+	}
+}
+
+
+.card_info {
+  width: 80%;
+  height: 50%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  border: 2px #E3E3E3 solid;
+  justify-content: center;
+}
+.card-date{
+  font-size: 40rpx;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.card-title{
+  margin-top: 5%;
+  padding: 50rpx;
+  font-size: 50rpx;
+}
+.text{
+  margin: 20rpx;
+  font-size: 50rpx;
+  font-family: KaiTi;
+}
